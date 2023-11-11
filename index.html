@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="inicio">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,12 +23,15 @@
             }
             nav {
                 background-color: #9575cd;
+                position: fixed;
+                top: 0px;
             }
             .nav-content {
                 background-color: #b39ddb;
             }
             body {
                 background-color: beige;
+                margin-top: 40%;
             }
 
             .contenido{
@@ -38,6 +41,15 @@
                 border: solid silver;
                 border-radius: 25px;
             }
+            #registro {
+                border: solid;
+                border-radius: 25px;
+                padding-bottom: 20px;
+            }
+            #icon_reg {
+                margin-left: 10px;
+                float: left;
+            }
         </style>
     </head>
     <body>
@@ -45,7 +57,8 @@
         <header>
             <nav class="nav-extended">
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">DAWeb</a>
+                    <a href="#registro"><i class="material-icons prefix" id="icon_reg">account_circle</i></a>
+                    <a href="#inicio" class="brand-logo">DAWeb</a>
                 </div>
                 <div class="nav-content">
                     <ul class="tabs tabs-transparent">
@@ -58,72 +71,106 @@
 
         </header>
 
-        <div class="contenido"id="tareas">
-            <h3>Tareas</h3>
-            <h4>Tema 1</h4>
-            <p>Tarea 1.1 Análisis de arquitectura web.</p>
-            <p>Tarea 1.2 Redes.</p>
-            <p>Tarea 1.3 Servidores de aplicación.</p>
+        <div>
+            <div class="contenido" id="tareas">
+                <h3>Tareas</h3>
+                <h4>Tema 1</h4>
+                <p>Tarea 1.1 Análisis de arquitectura web.</p>
+                <p>Tarea 1.2 Redes.</p>
+                <p>Tarea 1.3 Servidores de aplicación.</p>
 
-        </div>
-        <br>
+            </div>
+            <div class="contenido" id="practicas">
+                <h3>Prácticas</h3>
+                <h4>Tema 1</h4>
+                <p>Práctica 1.1 Instalación de servidor web</p>
+                <p>Práctica 1.2 Servidor de aplicaciones</p>
+                <p>Práctica 1.3 Conexión servidor web y servidor de aplicaciones</p>
 
-        <div class="contenido" id="practicas">
-            <h3>Prácticas</h3>
-            <h4>Tema 1</h4>
-            <p>Práctica 1.1 Instalación de servidor web</p>
-            <p>Práctica 1.2 Servidor de aplicaciones</p>
-            <p>Práctica 1.3 Conexión servidor web y servidor de aplicaciones</p>
+                <h4>Tema 2</h4>
+                <p>Práctica 2.1 Montaje del entorno</p>
+                <p>Práctica 2.2 Instalación y configuración de servidor FTP</p>
+                <p>Práctica 2.3 Profundización en servidores FTP</p>
 
-            <h4>Tema 2</h4>
-            <p>Práctica 2.1 Montaje del entorno</p>
-            <p>Práctica 2.2 Instalación y configuración de servidor FTP</p>
-            <p>Práctica 2.3 Profundización en servidores FTP</p>
+                <h4>Tema 3</h4>
+                <p>Práctica 3.1 Primeros pasos con git & Github</p>
+            </div>
 
-            <h4>Tema 3</h4>
-            <p>Práctica 3.1 Primeros pasos con git & Github</p>
-        </div>
+            <div class="contenido" id="examenes">
+                <h3>Exámenes</h3>
+                <h4>Tema 1</h4>
+                <p>Examen Arquitectura web</p>
 
-        <div class="contenido"id="examenes">
-            <h3>Exámenes</h3>
-            <h4>Tema 1</h4>
-            <p>Examen Arquitectura web</p>
+                <h4>Tema 2</h4>
+                <p>Examen FTP</p>
 
-            <h4>Tema 2</h4>
-            <p>Examen FTP</p>
+                <h4>Tema 3</h4>
+                <p>Examen git</p>
+            </div>
 
-            <h4>Tema 3</h4>
-            <p>Examen git</p>
-        </div>
+            <div class="container">
+                <div class="row">
+                    <form class="col s12" action id="registro">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_usuario" type="text"
+                                    class="validate">
+                                <label for="icon_usuario">Usuario:</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">email</i>
+                                <input id="icon_email" type="email"
+                                    class="validate">
+                                <label for="icon_email">Email</label>
+                            </div>
 
-        
-        <footer>
-            <footer class="page-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col l6 s12">
-                            <h5 class="white-text">Información</h5>
-                            <p class="grey-text text-lighten-4">Creado por ART.</p>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="icon_lock" type="password"
+                                    class="validate">
+                                <label for="icon_lock">Contraseña</label>
+                            </div>
+
                         </div>
-                        <div class="col l4 offset-l2 s12">
-                            <h5 class="white-text">Redes sociales</h5>
-                            <ul>
-                                <li><a class="grey-text text-lighten-3"
-                                        href="#!">Twitter</a></li>
-                                <li><a class="grey-text text-lighten-3"
-                                        href="#!">Instagram</a></li>
-                                <li><a class="grey-text text-lighten-3"
-                                        href="#!">Facebook</a></li>
-                            </ul>
+
+                        <div>
+                            <input class="waves-effect waves-light btn"
+                                type="submit" value="Submit">
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="footer-copyright">
+            </div>
+            <br>
+
+            <footer>
+                <footer class="page-footer">
                     <div class="container">
-                        2º DAW
+                        <div class="row">
+                            <div class="col l6 s12">
+                                <h5 class="white-text">Información</h5>
+                                <p class="grey-text text-lighten-4">Creado por
+                                    ART.</p>
+                            </div>
+                            <div class="col l4 offset-l2 s12">
+                                <h5 class="white-text">Redes sociales</h5>
+                                <ul>
+                                    <li><a class="grey-text text-lighten-3"
+                                            href="#!">Twitter</a></li>
+                                    <li><a class="grey-text text-lighten-3"
+                                            href="#!">Instagram</a></li>
+                                    <li><a class="grey-text text-lighten-3"
+                                            href="#!">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="footer-copyright">
+                        <div class="container">
+                            2º DAW
+                        </div>
+                    </div>
+                </footer>
             </footer>
-        </footer>
-    </body>
-</html>
+        </body>
+    </html>
